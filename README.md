@@ -42,3 +42,26 @@ function setShopItemAmount(shop, id, amount) {
   item.amount = amount;
 }
 ```
+## Задание 2. Реализовать класс для шифрования строк на TypeScript.
+
+В рамках задания нужно реализовать класс для шифрования и расшифровки строк согласно шифру Цезаря.
+
+Ссылка на ознакомление с шифром Цезаря: \
+https://ru.wikipedia.org/wiki/%D0%A8%D0%B8%D1%84%D1%80_%D0%A6%D0%B5%D0%B7%D0%B0%D1%80%D1%8F
+
+Требования к задаче:
+- Для шифрования/расшифровки должен быть создать классс `EncryptionService`;
+- При инициализации класса `EncryptionService` должна быть возможность указать сдвиг, по умолчанию он равен 3;
+- Должна быть поодержка шифрования строк с кириллическими и латинскиими символами, специальные символы (пробелы, точки и пр.) остаются без изменений;
+- При шифровании и расшифровки должен сохраняться регистр символов;
+
+Пример работы класса `EncryptionService`:
+```ts
+const service = new EncryptionService(3);
+
+const encodedString = service.encode("Hello world!");
+console.log(encodedString);  // Выведет "Mjqqt btwqi!"
+
+const decodedString = service.decode(encodedString);
+console.log(decodedString);  // Выведет "Hello world!"
+```
