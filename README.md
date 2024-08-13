@@ -57,7 +57,7 @@ https://ru.wikipedia.org/wiki/%D0%A8%D0%B8%D1%84%D1%80_%D0%A6%D0%B5%D0%B7%D0%B0%
 
 Пример работы класса `EncryptionService`:
 ```ts
-const service = new EncryptionService(3);
+const service = new EncryptionService(5);
 
 const encodedString = service.encode("Hello world!");
 console.log(encodedString);  // Выведет "Mjqqt btwqi!"
